@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Risk-Reward Calculator | MUBRA FX</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">MUBRA FX</div>
+            <ul class="nav-links">
+                <li><a href="risk-reward.html" class="active">Risk Calculator</a></li>
+                <li><a href="journal.html">Trading Journal</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container">
+        <div class="page-header">
+            <h1>Risk-Reward Calculator</h1>
+            <p>Calculate your position size and potential returns</p>
+        </div>
+
+        <div class="calculator-card">
+            <!-- Input Section -->
+            <div class="calculator-inputs">
+                <div class="input-group">
+                    <label for="accountBalance">Account Balance ($)</label>
+                    <input type="number" id="accountBalance" placeholder="10000" min="0" step="0.01">
+                </div>
+
+                <div class="input-group">
+                    <label for="riskPercentage">Risk Percentage (%)</label>
+                    <input type="number" id="riskPercentage" placeholder="2" min="0" max="100" step="0.1">
+                </div>
+
+                <div class="input-group">
+                    <label for="stopLoss">Stop Loss (Pips)</label>
+                    <input type="number" id="stopLoss" placeholder="50" min="0" step="1">
+                </div>
+
+                <div class="input-group">
+                    <label for="takeProfit">Take Profit (Pips)</label>
+                    <input type="number" id="takeProfit" placeholder="150" min="0" step="1">
+                </div>
+
+                <button class="btn btn-primary" id="calculateBtn">Calculate</button>
+            </div>
+
+            <!-- Results Section -->
+            <div class="calculator-results" id="resultsSection">
+                <h2>Results</h2>
+                <div class="result-grid">
+                    <div class="result-item">
+                        <span class="result-label">Risk Amount</span>
+                        <span class="result-value green" id="riskAmount">$0.00</span>
+                    </div>
+                    <div class="result-item">
+                        <span class="result-label">Reward Amount</span>
+                        <span class="result-value green" id="rewardAmount">$0.00</span>
+                    </div>
+                    <div class="result-item">
+                        <span class="result-label">Risk:Reward Ratio</span>
+                        <span class="result-value yellow" id="rrRatio">1:0.00</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 MUBRA FX. Trade Smart. Control Risk. Build Discipline.</p>
+    </footer>
+
+    <script src="js/risk.js"></script>
+</body>
+</html>
